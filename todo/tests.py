@@ -9,6 +9,7 @@ class SampleTestCase(TestCase):
     def test_sample(self):
         self.assertEqual(1 + 2, 3)
 
+
 class TaskModelTestCase(TestCase):
     def test_create_task1(self):
         due = timezone.make_aware(datetime(2024, 6, 30, 23, 59, 59))
@@ -48,6 +49,7 @@ class TaskModelTestCase(TestCase):
         current = timezone.make_aware(datetime(2024, 6, 30, 0, 0, 0))
         task = Task(title='task3', due_at=None)
         task.save()
+
 
 class TodoViewCase(TestCase):
     def test_index_get(self):
